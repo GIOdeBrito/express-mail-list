@@ -1,0 +1,17 @@
+
+fieldset {
+    margin: auto 1rem;
+}
+
+fieldset > form > div {
+    margin: .5rem 0;
+}
+
+fieldset > form div input {
+    display: block;
+}
+
+fieldset > form div input {
+    display: block;
+}
+

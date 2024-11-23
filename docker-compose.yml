@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+    app:
+        image: mail-list-img:latest
+        container_name: mail-list-container
+        build:
+            context: .
+            dockerfile: Dockerfile
+        ports:
+            - "3000:8080"
+        command: npm start
+        tty: true

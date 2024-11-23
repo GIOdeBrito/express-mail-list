@@ -1,0 +1,36 @@
+
+:root {
+    --color-main: #578c57;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    background: var(--color-main);
+    color: #fff;
+    text-align: center;
+}
+
+footer {
+    margin-top: auto;
+    background: var(--color-main);
+    color: #fff;
+    text-align: center;
+}
+
+footer > p {
+    font-size: 12px;
+    opacity: .5;
+}

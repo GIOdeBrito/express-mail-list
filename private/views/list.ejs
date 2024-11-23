@@ -1,0 +1,32 @@
+<table>
+    <thead>
+        <tr>
+			<th>Full name</th>
+			<th>Mail address</th>
+			<th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <%
+
+        for(let item of options?.list)
+        {
+            %>
+
+            <tr>
+				<td><%= item.name %></td>
+			    <td><%= item.mail %></td>
+                <td>
+                    <form action="/v1/removeentry/" method="DELETE">
+                        <button type="submit">Remove</button>
+                    </form>
+                </td>
+            </tr>
+
+            <%
+        }
+
+        %>
+    </tbody>
+</table>

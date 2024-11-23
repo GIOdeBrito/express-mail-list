@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="author" content="Giordano de Brito">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><%= title %> | Mails List</title>
+        <link rel="stylesheet" href="public/style/master.css">
+        <%
+
+        if(options && Array.isArray(options?._style)) {
+            for(let stylename of options?._style) {
+                %>
+                <link rel="stylesheet" href="public/style/<%= stylename %>.css">
+                <%
+            }
+        }
+
+        %>
+    </head>
+
+    <body>
+        <header>
+            <p>Mails List</p>
+        </header>
+
+        <%- include(renderbody); %>
+
+        <footer>
+            <p>Giordano de Brito - <%= new Date().getFullYear() %></p>
+        </footer>
+    </body>
+</html>

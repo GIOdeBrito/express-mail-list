@@ -1,0 +1,21 @@
+
+table {
+    margin: 1rem;
+    border-style: solid;
+    border-color: var(--color-main);
+    border-radius: .4rem;
+}
+
+table > thead > tr > th {
+    padding: 1rem;
+    background: var(--color-main);
+    color: #fff;
+}
+
+table > tbody {
+    text-align: center;
+}
+
+table > tbody > :nth-child(even) {
+    background-color: #578c5761;
+}

@@ -1,0 +1,16 @@
+{
+  "name": "mails",
+  "version": "1.0.0",
+  "main": "src/app.cjs",
+  "scripts": {
+    "start": "node src/app.cjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.1"
+  }
+}
