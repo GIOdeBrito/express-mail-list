@@ -15,10 +15,11 @@
             %>
 
             <tr>
-				<td><%= item.name %></td>
-			    <td><%= item.mail %></td>
+				<td><%= item.Name %></td>
+			    <td><%= item.Mail %></td>
                 <td>
                     <form action="/v1/removeentry/" method="DELETE">
+						<input type="hidden" name="Mail" value="<%= item.Mail %>">
                         <button type="submit">Remove</button>
                     </form>
                 </td>

@@ -1,37 +1,26 @@
 
 const express = require('express');
 const { Router } = express;
-const { insertMailInList } = require('./mails.list.cjs');
 
 const routesRest = Router();
 
 routesRest.use(express.urlencoded({ extended: true }));
 
-routesRest.get('/v1/test', (req, res) =>
-{
-    res.send({ version: "v1", time: new Date() });
-});
+/* Controllers */
 
-routesRest.post('/v1/registermail', (req, res) =>
-{
-    const mail = {
-        mail: req.body.Mail,
-        name: req.body.Name
-    };
+const TestController = require('../controllers/test.controller.cjs');
+const MailController = require('../controllers/mail.controller.cjs');
 
-    insertMailInList(mail);
+/* GET */
 
-    res.redirect('/registered');
-});
+routesRest.get('/v1/test', TestController.send);
 
-routesRest.post('/v1/removeentry', (req, res) =>
-{
+/* POST */
 
-});
+routesRest.post('/v1/registermail', MailController.register);
 
-routesRest.post('/v1/*', (req, res) =>
-{
-	res.status(404).send({ status: 404 });
-});
+/* DELETE */
+
+routesRest.delete('/v1/removeentry', MailController.remove);
 
 module.exports = routesRest;

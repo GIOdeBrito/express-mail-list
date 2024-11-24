@@ -1,7 +1,8 @@
 
 const { Router } = require('express');
 const renderPage = require('./rendering.cjs');
-const { getMailList } = require('./mails.list.cjs');
+
+const MailController = require('../controllers/mail.controller.cjs');
 
 const routesPage = Router();
 
@@ -17,7 +18,7 @@ routesPage.get('/registered', (req, res) =>
 
 routesPage.get('/list', (req, res) =>
 {
-    let list = getMailList() ?? [];
+    let list = MailController.MailList;
 
     renderPage('Mail List', 'list', res, { _style: ['mail.list'], list: list });
 });
